@@ -5,15 +5,14 @@ Smart Contract written in Solidity that runs on an Ethereum-compatible blockchai
 ----
 
 ## Technologies
-This application is written in the Solidity programming language. The code is edited in Remix IDE. This contract uses the 0.5.0 compiler verison. 
+This application is written in the [Solidity](https://docs.soliditylang.org/_/downloads/en/latest/pdf/) programming language and is edited in [Remix IDE](https://remix-ide.readthedocs.io/en/latest/). This contract uses the 0.5.0 compiler verison. 
 
 
 ----
 
 ## Installation Guide
-The code in this contract does not use any outside libraries or modules. 
 
-For the user to compile the code correctly, they must make sure the compiler version in the code matches the compiler version on Remix IDE. 
+For the user to compile the code correctly, the compiler version in the code must match the compiler version on Remix IDE. 
 
 ----
 
@@ -75,7 +74,36 @@ Complete the following steps:
 
 ### Interact with Deployed Smart Contract 
 
-Now that the contract is deployed, the user can test the functionality. 
+Now that the contract is deployed, the user can test the functionality. Below is a demo for testing.
+
+1. Navigate to the "Deployed Contracts" area and click the drop down arrow to reveal the contract functions.
+
+2. Use the `setAccounts` function to define the authorized Ethereum address that will be able to withdraw funds from your contract. Below are some dummy addresses for use if needed:
+
+    - account1 address: 0x0c0669Cd5e60a6F4b8ce437E4a4A007093D368Cb
+
+    - account2 address: 0x7A1f3dFAa0a4a19844B606CD6e91d693083B12c0
+
+    ![](Execution_Results/setAccounts.png)
+
+3. Test the deposit functionality by sending the following amounts of ether. After each transaction, use the `contractBalance` function to verify that the funds were added
+
+    - Transaction 1: Send 1 ether as wei
+    ![](Execution_Results/balance1eth.png)
+
+    - Transaction 2: Send 10 ether as wei
+    ![](Execution_Results/balance10eth.png)
+
+    - Transaction 3: Send 5 ether 
+    ![](Execution_Results/balance15eth.png)
+
+4. Test the withdrawl functionality through the following transactions. After each transaction, use the `contractBalance` function to verify that the funds were withdrawn. Also, use the `lastToWithdraw` and `lastWithdrawAmount` functions to verify that the addresses and amount were correct.
+
+    - Transaction 1: Withdraw 5 ether into `accountOne`
+    ![](Execution_Results/withdraw1.png)
+    
+    - Transaction 2: Withdraw 10 ether into `accountTwo`
+    ![](Execution_Results/withdraw2.png)
 
 ----
 
