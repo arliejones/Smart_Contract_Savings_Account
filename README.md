@@ -61,11 +61,9 @@ Complete the following steps:
 
 1. Navigae to the "Compile" pane. Compile the code using the matching compiler version.
 
-    ![](Execution_Results/compile.png)
 
 2. Navigate to the "Deploy & Run Transactions" pane. Make sure the "JavaScript VM" is selected as the environment. *In newer versions of Remix IDE, this may be renamed to "Remix VM"*
 
-    ![](Execution_Results/deploy.png)
 
 3. Click the Deploy button. To confirm it has been successfully deployed, navigate to the terminal window near the bottom of the pane. It should look something like this:
 
@@ -89,20 +87,25 @@ Now that the contract is deployed, the user can test the functionality. Below is
 3. Test the deposit functionality by sending the following amounts of ether. After each transaction, use the `contractBalance` function to verify that the funds were added
 
     - Transaction 1: Send 1 ether as wei
+
     ![](Execution_Results/balance1eth.png)
 
     - Transaction 2: Send 10 ether as wei
+
     ![](Execution_Results/balance10eth.png)
 
     - Transaction 3: Send 5 ether 
+
     ![](Execution_Results/balance15eth.png)
 
 4. Test the withdrawl functionality through the following transactions. After each transaction, use the `contractBalance` function to verify that the funds were withdrawn. Also, use the `lastToWithdraw` and `lastWithdrawAmount` functions to verify that the addresses and amount were correct.
 
     - Transaction 1: Withdraw 5 ether into `accountOne`
+
     ![](Execution_Results/withdraw1.png)
     
     - Transaction 2: Withdraw 10 ether into `accountTwo`
+
     ![](Execution_Results/withdraw2.png)
 
 ----
